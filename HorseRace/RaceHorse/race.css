@@ -1,0 +1,614 @@
+﻿table
+{
+    border-collapse: collapse;
+}
+a
+{
+    color: #000099;
+    text-decoration: none;
+}
+a:hover
+{
+    color: Red;
+    text-decoration: underline;
+}
+#labelTitle
+{
+    font-size: 22px;
+    font-weight: bold;
+}
+#menu
+{
+    cursor: hand;
+}
+@media all
+{
+    body
+    {
+        margin: 0px;
+        font: 10pt tahoma;
+        cursor: default;
+        overflow-y: auto;
+        scrollbar-arrow-color: #606060;
+        scrollbar-base-color: #707070;
+        scrollbar-darkshadow-color: #606060;
+        scrollbar-face-color: #eeeeee;
+        scrollbar-highlight-color: #fcfcfc;
+        scrollbar-shadow-color: #d0d0d0;
+    }
+
+    .Backend
+    {
+        overflow: hidden;
+    }
+
+    .Backend, .Content
+    {
+        padding: 0px 5px 5px 5px;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        background: url(images/bg_bknd.jpg) repeat-x 0% 100%;
+    }
+
+    .Title
+    {
+        color: #ffffa0;
+        padding-right: 6px;
+        position: relative;
+        top: 2px;
+        height: 36px;
+        width: 100%;
+        font: bold 22px century gothic, arial;
+        filter: shadow(strength=2,direction=135);
+    }
+
+    form
+    {
+        margin: 0px;
+    }
+    table
+    {
+        font: 13px;
+    }
+    .FD
+    {
+        padding-left: 15px;
+    }
+    .RQFD
+    {
+        padding-left: 15px;
+        color: #d02020 !important;
+    }
+
+    .TX
+    {
+        font: 12px tahoma;
+        border: 1 solid #e0e0e0;
+        padding: 1 4 1 4px;
+    }
+    .ST
+    {
+        font: 14pt trebuchet ms, arial;
+        color: #882200;
+        padding-top: 8px;
+    }
+    .FT
+    {
+        font: bold 12pt trebuchet ms, arial;
+        color: #775500;
+        padding-top: 4px;
+    }
+    .FT br
+    {
+        font-size: 6px;
+    }
+
+    .DN
+    {
+        border: 1 solid #d0d0d0;
+        background: #f6f6f6;
+        padding: 15px;
+    }
+
+    .FLD
+    {
+        cursor: default;
+        font: bold 11px;
+        background: #e0e0e0;
+        border-bottom: 1px solid #909090;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#ffffff,EndColorStr=#b0b0b0);
+    }
+    .FLD th
+    {
+        border-left: 1px solid #a0a0a0;
+    }
+    .FLD th.HVR
+    {
+        cursor: hand;
+        border-top: 2px solid #33ff00;
+        border-bottom: 1px solid #b0b0b0;
+        background: #e0e0e0;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f0f0f0,EndColorStr=#b0b0b0);
+    }
+    .FLD th.CLK
+    {
+        cursor: hand;
+        border-top: 3px solid #33ff00;
+        background: #e0e0e0;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#909090,EndColorStr=#e0e0e0);
+    }
+
+    .DtHd
+    {
+        position: relative;
+        width: 248px;
+    }
+    .DtBx
+    {
+        position: relative;
+        width: 246px;
+        height: 511px;
+        top: -1px;
+        filter: alpha(opacity=97);
+    }
+
+    .List
+    {
+        font-size: 12px;
+    }
+    .BD
+    {
+        border: 1 solid #404040;
+    }
+    .FX
+    {
+        table-layout: fixed;
+    }
+
+    .LNK
+    {
+        cursor: hand;
+    }
+    .NEG
+    {
+        color: #c02020;
+    }
+    .RD
+    {
+        color: #ee0000;
+    }
+    .NA
+    {
+        color: #d0d0d0 !important;
+        font-style: normal;
+    }
+
+    .List .TT
+    {
+        height: 21px;
+        padding-left: 4px;
+    }
+    .List .TT span
+    {
+        font: 17px trebuchet ms, arial;
+        color: white;
+        position: relative;
+        top: -3px;
+        width: 100%;
+        filter: shadow(strength=1,direction=135);
+    }
+    .List .TT small
+    {
+        position: relative;
+        top: -1px;
+        font: 14px;
+        color: #ffdd00;
+    }
+    .List marquee
+    {
+        font: 15px trebuchet ms;
+        color: #ffffaa;
+        height: 100%;
+        cursor: default;
+        position: relative;
+        top: -8px;
+    }
+
+    .List .TT_AC
+    {
+        background: #505050;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#606060,EndColorStr=#202020);
+    }
+    .List .TT_FC
+    {
+        background: #dd0077;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f00080,EndColorStr=#600030);
+    }
+    .List .TT_TR
+    {
+        background: #00aa55;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#00b060,EndColorStr=#006030);
+    }
+    .List .TT_BT
+    {
+        background: #0077dd;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#0080e0,EndColorStr=#003060);
+    }
+    .List .TT_EA
+    {
+        background: #ff8800;
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#ff9000,EndColorStr=#c03000);
+    }
+
+    .List .RCF
+    {
+        text-align: left;
+        font: bold 16px arial;
+        color: #007700;
+        height: 30px;
+        padding-left: 3px;
+        padding-top: 8px;
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+    }
+    .List .RUC
+    {
+        text-align: left;
+        font: bold 11px;
+        color: #ff0099;
+        height: 17px;
+        padding-left: 3px;
+        padding-top: 2px;
+        border-bottom: 1px solid #a0a0a0;
+    }
+
+    .List th
+    {
+        font: bold 11px;
+        height: 19px;
+        background: #f0f0f0;
+        text-align: center;
+        padding: 2px;
+        border-right: 1px solid #c0c0c0;
+        border-bottom: 1 solid #b8b8b8;
+    }
+    .List td
+    {
+        height: 21px;
+        border-bottom: 1px solid #a0a0a0;
+    }
+    .List .LB
+    {
+        border-left: 1px solid #a0a0a0;
+    }
+    .List .RB
+    {
+        border-right: 1px solid #a0a0a0;
+    }
+    .Grp
+    {
+        padding: 2px;
+        background: #f8f8f8;
+    }
+
+    select
+    {
+        cursor: default;
+        font: 12px tahoma;
+    }
+    select.Card
+    {
+        font: bold 11px tahoma;
+    }
+
+    input
+    {
+        font: 12px tahoma;
+        background: white;
+        border: 1px solid #e4e4e4;
+        border-bottom: 1px solid #a4a4a4;
+    }
+    input.CBx
+    {
+        border: 0px;
+        height: 17px;
+        background: none;
+    }
+    input.RO
+    {
+        background: #fcfcfc;
+        border: 1 solid #e0e0e0;
+    }
+    input.Cal
+    {
+        background: white;
+        text-align: center;
+        cursor: hand;
+        width: 80px;
+    }
+
+    input.Ctr
+    {
+        text-align: center;
+    }
+    input.Num
+    {
+        text-align: right;
+    }
+    .Full
+    {
+        width: 100%;
+    }
+
+    .Backend, .SBt, .Btn
+    {
+        background: #f0f0f0;
+        border: 1px solid gray;
+        font: bold 10px verdana;
+        height: 17px;
+    }
+    .Backend, .Btn
+    {
+        font: bold 13px tahoma;
+        height: 23px;
+    }
+    .Backend button
+    {
+        width: 49px;
+        font: 9px verdana;
+        background: #f0f0f0;
+        border: 1px solid #606060;
+        margin-left: 1px;
+    }
+
+    .Acc
+    {
+        background: white;
+        filter: alpha(opacity=86);
+    }
+    .Tote
+    {
+        background: white;
+    }
+    .Frc
+    {
+        background: #ffccee;
+    }
+    .Bet
+    {
+        background: #e8f0ff;
+    }
+    .Eat
+    {
+        background: #ffffc0;
+    }
+    .Tot td
+    {
+        height: 17px;
+        font: bold 11px;
+        border-bottom: 1px solid #505050;
+    }
+    .Bet tr, .Eat tr
+    {
+        height: 27px;
+    }
+
+    .Hrs_1
+    {
+        font: 16pt;
+        background: #ffe0e0;
+        border: 1px solid #505050;
+        position: relative;
+        left: -2px;
+        top: -2px;
+        width: 28px;
+        text-align: center;
+        margin-right: 3px;
+    }
+    .Hrs_2
+    {
+        font: 16pt;
+        background: #ffffe0;
+        border: 1px solid #505050;
+        position: relative;
+        left: -2px;
+        top: -2px;
+        width: 28px;
+        text-align: center;
+        margin-right: 3px;
+    }
+    .Hrs_3
+    {
+        font: 16pt;
+        background: #e0ffe0;
+        border: 1px solid #505050;
+        position: relative;
+        left: -2px;
+        top: -2px;
+        width: 28px;
+        text-align: center;
+        margin-right: 3px;
+    }
+    .Hrs_4
+    {
+        font: 16pt;
+        background: #ffffff;
+        border: 1px solid #505050;
+        position: relative;
+        left: -2px;
+        top: -2px;
+        width: 28px;
+        text-align: center;
+        margin-right: 3px;
+    }
+
+
+    .Ucf
+    {
+        background: white;
+        height: 27px;
+    }
+    .Ucf img
+    {
+        cursor: hand;
+        margin: 1px;
+    }
+    .Ucf .XB
+    {
+        background: #2060d0;
+        border: 1px solid #104090;
+    }
+    .Ucf .XE
+    {
+        background: #ff8000;
+        border: 1px solid #904000;
+    }
+
+    .Bet .HVR
+    {
+        background: #66bbff;
+        cursor: hand;
+    }
+    .Bet .Grp
+    {
+        height: 23px;
+        background: #c8d0df;
+    }
+
+    .Eat .HVR
+    {
+        background: #ffdd66;
+        cursor: hand;
+    }
+    .Eat .Grp
+    {
+        height: 23px;
+        background: #dfdfa0;
+    }
+
+    .F1
+    {
+        background: #ff0000 !important;
+    }
+    .F2
+    {
+        background: #ffa000 !important;
+    }
+    .F3
+    {
+        background: #ffff70 !important;
+    }
+
+    .DVDN
+    {
+        margin-left: 4px;
+        height: 27px;
+        width: 235px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .CTY_XX
+    {
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#d0d0d0,EndColorStr=#404040);
+    }
+    .CTY_SG
+    {
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#dd0000,EndColorStr=#440000);
+    }
+    .CTY_MY
+    {
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#0055aa,EndColorStr=#000044);
+    }
+    .CTY_HK
+    {
+        filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#009922,EndColorStr=#004400);
+    }
+
+    .CTY
+    {
+        color: #ffd000;
+        padding-left: 8px;
+        font: 19pt trebuchet ms, arial;
+        width: 100%;
+        filter: shadow(color=#202000,strength=2,direction=135);
+    }
+    .VDY
+    {
+        font-weight: bold;
+        color: white;
+    }
+    .VNU
+    {
+        color: #ffffb0;
+        padding-left: 10px;
+        font: 12px tahoma;
+        width: 100%;
+        filter: shadow(strength=1,direction=135);
+    }
+
+    .2px
+    {
+        font: 2px;
+    }
+    .4px
+    {
+        font: 4px;
+    }
+
+    .noscr
+    {
+        display: none;
+    }
+}
+
+@media print
+{
+    .Backend, .Content
+    {
+        overflow-y: visible;
+        background: white;
+    }
+    .DN
+    {
+        padding: 6px;
+    }
+    .ST
+    {
+        font-size: 14pt;
+        color: black;
+        padding-top: 8px;
+    }
+    .FT
+    {
+        font-size: 11pt;
+        color: #404040;
+        padding-top: 4px;
+    }
+    .List
+    {
+        font-size: 11px;
+    }
+    .List td
+    {
+        height: 19px;
+    }
+    .List th
+    {
+        font: bold 11px;
+        padding: 1px;
+    }
+    .noprn
+    {
+        display: none;
+    }
+    .noscr
+    {
+        display: inline;
+    }
+    .eject
+    {
+        page-break-before: always;
+    }
+}

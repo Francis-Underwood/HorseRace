@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+..\RaceHorse\Bin\Race.LogicLayer.dll
+..\RaceHorse\Bin\Race.LogicLayer.pdb
+obj\Debug\Race.LogicLayer.dll
+obj\Debug\Race.LogicLayer.pdb

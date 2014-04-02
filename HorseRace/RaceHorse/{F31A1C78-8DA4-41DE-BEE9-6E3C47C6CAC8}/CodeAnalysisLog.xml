@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 8\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.Xsl"?>
+<FxCopReport Version="8">
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="Line">行</String>
+  <String Key="LocationNotStoredInPdb">&lt;Location not stored in Pdb&gt;</String>
+  <String Key="Project">项目</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">Microsoft Visual Studio 2005 代码分析报告</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Code.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Code”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_global.asax.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_global.asax”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Licenses.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Licenses”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_-njz1d0n.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_-njz1d0n”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_3beij_ya.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_3beij_ya”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_c9h5sooz.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_c9h5sooz”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_devuzkwq.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_devuzkwq”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_eac9enrs.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_eac9enrs”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_hkmoqyzz.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_hkmoqyzz”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_hphfrozu.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_hphfrozu”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_irhnfj45.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_irhnfj45”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_jaib9ghc.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_jaib9ghc”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_qmc6eejv.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_qmc6eejv”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_rhfeyipw.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_rhfeyipw”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_rizuhse-.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_rizuhse-”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_sgd1dt06.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_sgd1dt06”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_s_pgel05.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_s_pgel05”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_tqio7vh9.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_tqio7vh9”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 App_Web_w2nhe5kf.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“App_Web_w2nhe5kf”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 FreeTextBox.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“FreeTextBox”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 MySql.Data.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“MySql.Data”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+  <Exception Keyword="CA0055" Kind="AssemblyLoad">
+   <Type>Microsoft.FxCop.Common.AssemblyLoadException</Type>
+   <ExceptionMessage>无法加载 Race.LogicLayer.dll。</ExceptionMessage>
+   <InnerType>Microsoft.FxCop.Sdk.FxCopException</InnerType>
+   <InnerExceptionMessage>为此项目成功加载的第一个程序集已链接到 v2.0.50215。“Race.LogicLayer”已链接到 v2.0.50727，因此不能从同一个项目中进行分析。</InnerExceptionMessage>
+   <InnerStackTrace>   在 Microsoft.FxCop.Engines.Introspection.IntrospectionAnalysisEngine.CanLoadTargetFile(TargetFile target)
+   在 Microsoft.FxCop.Common.EngineManager.LoadTargets(TargetFile target, Boolean resetCounts, String loadEngine)</InnerStackTrace>
+  </Exception>
+ </Exceptions>
+</FxCopReport>

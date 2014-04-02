@@ -1,0 +1,44 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="OtherHead.ascx.cs" Inherits="ASCX_OtherHead" %>
+
+<script>
+function goURL(url) {
+    location.href = url;
+}
+</script>
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+        <td height="59" width="220" rowspan="2">
+            <img src="images/logo.jpg"></td>
+        <td style="height: 23px">
+            <table class="FLD" cellspacing="0" width="100%" height="100%">
+                <tr>
+                    <th onmouseover="this.className='HVR'" onmousedown="this.className='CLK'" onmouseout="this.className=''"
+                        onclick="goURL('reguser.aspx');">
+                        我的资料</th>
+                    <th onmouseover="this.className='HVR'" onmousedown="this.className='CLK'" onmouseout="this.className=''"
+                    onclick="goURL('Other/Result.aspx');">
+                        赛果</th>
+                    <th onmouseover="this.className='HVR'" onmousedown="this.className='CLK'" onmouseout="this.className=''"
+                    onclick="goURL('Other/TotalReport.aspx');">
+                        总账报告</th>
+                    <th onmouseover="this.className='HVR'" onmousedown="this.className='CLK'" onmouseout="this.className=''"
+                        onclick="goURL('Default_SG.aspx');">
+                        主页 >
+                    </th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#bb0000" background="images/bg_menu.jpg" height="36">
+            <div id="Title" class="Title">
+                户口管理
+            </div>
+            <div id="Time" style="color:white;font:15px century gothic;position:absolute;
+                top:27px;right:5px;filter:shadow(strength=2,direction=135)">
+                <%=DateTime.Now.ToString() %>
+            </div>
+        </td>
+    </tr>
+</table>
