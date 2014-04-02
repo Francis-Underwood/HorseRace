@@ -18,6 +18,6 @@ public partial class Default : BasePage
     protected void Button1_Click(object sender, EventArgs e)
     {
         //Server.Transfer("default.aspx", false);
-        Response.Redirect("default_SG.aspx");
+        Response.Redirect("Default_SG.aspx");
     }
 }

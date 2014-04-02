@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default_SG.aspx.cs" Inherits="Default_SG" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default_SG.aspx.cs" Inherits="_Default_SG" %>
 
 <%@ Register Src="ASCX/MyRace.ascx" TagName="MyRace" TagPrefix="Race" %>
 <%@ Register Src="~/ASCX/Head.ascx" TagName="Head" TagPrefix="Race" %>

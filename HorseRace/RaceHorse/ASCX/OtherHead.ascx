@@ -23,7 +23,7 @@ function goURL(url) {
                     onclick="goURL('Other/TotalReport.aspx');">
                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:LableResource3.Text %>"></asp:Label></th>
                     <th onmouseover="this.className='HVR'" onmousedown="this.className='CLK'" onmouseout="this.className=''"
-                        onclick="goURL('Default_SG.aspx');">
+                        onclick="goURL('default_SG.aspx');">
                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:LableResource4.Text %>"></asp:Label> 
                     </th>
                 </tr>

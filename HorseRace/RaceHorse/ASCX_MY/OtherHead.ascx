@@ -23,7 +23,7 @@ function goURL(url) {
                     onclick="goURL('Other/TotalReport.aspx');">
                         总账报告</th>
                     <th onmouseover="this.className='HVR'" onmousedown="this.className='CLK'" onmouseout="this.className=''"
-                        onclick="goURL('Default_SG.aspx');">
+                        onclick="goURL('default_MY.aspx');">
                         主页 >
                     </th>
                 </tr>
