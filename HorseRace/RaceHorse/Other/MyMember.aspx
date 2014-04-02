@@ -20,7 +20,7 @@
         
         <tr>
         <td><asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" /></td>
-        <td><asp:Button ID="BtnRemove" runat="server" Text="Remove" OnClick="BtnRemove_Click" /></td>
+        <td><asp:Button ID="BtnRemove" runat="server" Text="Remove" OnClick="BtnRemove_Click"  OnClientClick="return confirm('是否确认删除！')" /></td>
         </tr>
         
         </table>
@@ -38,7 +38,7 @@
         <table style="width: 100%">
             <tr>
                 <td colspan="3">
-        <asp:Label ID="LblMemberDetial" runat="server" Text="Label"></asp:Label></td>
+        <asp:Label ID="LblMemberDetial" runat="server" Text="Member Details" Font-Size="15" ForeColor="Brown"></asp:Label></td>
                 
             </tr>
             <tr>
@@ -48,7 +48,7 @@
         <asp:Label ID="LblLastLogin" runat="server" Text="LastLogin"></asp:Label></td>
                 <td  colspan="2" style="width: 42px; height: 26px;">
         
-        <asp:TextBox ID="TxtBoxLastLogin" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="TxtBoxLastLogin" runat="server" Text="N.A" ReadOnly="true"></asp:TextBox></td>
                 
             </tr>
             <tr>
@@ -57,7 +57,7 @@
         <asp:Label ID="LblAccountPrefix" runat="server" Text="Account Prefix"></asp:Label></td>
                 <td  colspan="2" style="width: 42px">
         
-        <asp:TextBox ID="TxtBoxAccountPrefix" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="TxtBoxAccountPrefix" runat="server" Text="HH" ReadOnly="true"></asp:TextBox>\<asp:TextBox ID="TextBox1" runat="server" Text="010" ReadOnly="true"></asp:TextBox></td>
             </tr>
                  <tr>
                 <td style="height: 21px; width: 173px;">
@@ -83,12 +83,12 @@
         <asp:TextBox ID="TxtBoxLoginID" runat="server"></asp:TextBox></td>
             </tr>
                  <tr>
-                <td style="width: 173px">
+                <td style="width: 173px; height: 58px;">
         
         <asp:Label ID="LblPassword" runat="server" Text="Password"></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+                <td  colspan="2" style="width: 42px; height: 58px;">
         
-        <asp:TextBox ID="TxtBoxPassword" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="TxtBoxPassword" runat="server"></asp:TextBox><em>(case sensitive alohabet)</em></td>
             </tr>
                  <tr>
                 <td style="width: 173px">
@@ -98,17 +98,17 @@
                 <td  colspan="2" style="width: 42px">
         
         <asp:DropDownList ID="DDListGroup2" runat="server">
-        <asp:ListItem></asp:ListItem>
+        <asp:ListItem>player</asp:ListItem>
         
         </asp:DropDownList>
         <asp:DropDownList ID="DDListGroup3" runat="server">
-        <asp:ListItem></asp:ListItem>
-        <asp:ListItem></asp:ListItem>
+        <asp:ListItem>player</asp:ListItem>
+        <asp:ListItem>agent</asp:ListItem>
         </asp:DropDownList>
         <asp:DropDownList ID="DDListGroup4" runat="server">
-        <asp:ListItem></asp:ListItem>
-        <asp:ListItem></asp:ListItem>
-        <asp:ListItem></asp:ListItem>
+        <asp:ListItem>player</asp:ListItem>
+        <asp:ListItem>agent</asp:ListItem>
+        <asp:ListItem>main agent</asp:ListItem>
         </asp:DropDownList>
         
         </td>
@@ -120,25 +120,25 @@
         <asp:Label ID="LblStatus" runat="server" Text="Status"></asp:Label></td>
                 <td  colspan="2" style="width: 42px">
         
-       <asp:CheckBox ID="CheckBox1" runat="server" Width="113px" /></td>
+       <asp:CheckBox ID="CheckBox1" runat="server" Width="113px"  Text="Active"/></td>
             </tr>
                  <tr>
                 <td colspan="3">
         
-        <asp:Label ID="LblNote" runat="server" Text=""></asp:Label></td>
+        <asp:Label ID="LblNote" runat="server" Text="Note:        Inactivingating"></asp:Label></td>
                
             </tr>
                  <tr>
-                <td colspan="3">
+                <td colspan="3" style="height: 5px">
         
-        <asp:Label ID="LblCreditDetial" runat="server" Text="Credit Detial"></asp:Label></td>
+        <asp:Label ID="LblCreditDetial" runat="server" Text="Credit Detial" Font-Size="15" ForeColor="Brown"></asp:Label></td>
                 
             </tr>
             
             <tr>
                 <td style="width: 173px">
                
-        <asp:Label ID="LblCurrency" runat="server" Text="Currency"></asp:Label></td>
+        <asp:Label ID="LblCurrency" runat="server" Text="Currency" ></asp:Label></td>
                 <td  colspan="2" style="width: 42px">
         
         <asp:TextBox ID="TxtBoxCurrency" runat="server"></asp:TextBox></td>
@@ -220,7 +220,7 @@
                  <td style="width: 212px">
                 <asp:Button ID="BtnReset" runat="server" Text="Reset" OnClick="BtnReset_Click" />
                 <asp:Button ID="BtnUndo" runat="server" Text="Undo" OnClick="BtnUndo_Click" />
-                <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" /></td>
+                <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click"  ValidationGroup="PanInfo"/></td>
                 <td>
                     &nbsp;</td>
             </tr>
@@ -229,14 +229,19 @@
         </table>
         </center>
         
-        
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="TxtBoxLoginID"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="TxtBoxPassword"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="TxtBoxAccountNo"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="TxtBoxFullName"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="DDListGroup2"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="DDListGroup3"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="PanInfo" ControlToValidate="DDListGroup4"></asp:RequiredFieldValidator>
+        &nbsp; &nbsp;
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="PanInfo" ShowMessageBox="True" ShowSummary="False"/>
         </asp:Panel>
-        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
-        </asp:Repeater>
         
         
-        
-        
+    
         
         <asp:Panel ID="PanelInfoModify" runat="server" Height="50px" Width="125px" OnLoad="PanelInfoModify_Load">
         </asp:Panel>

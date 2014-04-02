@@ -414,7 +414,11 @@ namespace Race.LogicLayer
             string cmdText = "SELECT UserID,UserName FROM reguser WHERE Parent=" + sUserID;
             return DataAccess.ReturnDataset(cmdText);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sUserName"></param>
+        /// <returns></returns>
         public DataTable GetMemberInfo(string sUserName)
         {
             string cmdText = "SELECT * FROM reguser WHERE UserName='" + sUserName+"'";
@@ -423,12 +427,69 @@ namespace Race.LogicLayer
                 return dt;
             
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sUserID"></param>
+        /// <returns></returns>
         public DataTable GetMemberList(string sUserID)
         {
             string cmdText = "SELECT UserName FROM reguser WHERE Parent=" + sUserID;
             DataTable dt = DataAccess.ReturnDataset(cmdText).Tables[0];
             return dt;
         }
+
+        public void InsertUser(string sUserName, string sUserPass, string sFullName,string sAccount,
+                              //string sLineLoss, string sXiaXianJiXian, string sTax1, string sTax2,
+                              string sUserNumber, string sPermission,string sParent)
+        {
+            string cmdText = @"INSERT INTO reguser (UserNumber,UserName,UserPass
+                            ,PasswordTime,RegTime,RolePermission,
+                            FullName,Parent,Account) VALUES('" + sUserNumber + "','" + sUserName +
+                            "','" + sUserPass + "',NOW(),NOW(),'" + sPermission +
+                            "','" + sFullName + "'," + sParent + "," + sAccount + ")";
+            DataAccess.ExecuteNonQuery(cmdText);
+
+            //cmdText = "UPDATE reguser SET Account=Account-" + sAccount + "WHERE UserID=" + sParent;
+            //DataAccess.ExecuteNonQuery(cmdText);
+        }
+
+
+        public void UpdateAccount(string sUserID, string sAccount)
+        {
+            string cmdText = "UPDATE reguser SET Account=Account-" + sAccount + " WHERE UserID=" + sUserID;
+            DataAccess.ExecuteNonQuery(cmdText);
+        }
+
+
+
+        public string ReturnCmdStr(string sUserName, string sUserPass, string sFullName,
+                              //string sLineLoss, string sXiaXianJiXian, string sTax1, string sTax2,
+                              string sUserNumber, string sPermission, string sParent)
+        {
+            string cmdText = @"INSERT INTO reguser (UserNumber,UserName,UserPass,
+                             PasswordTime,RegTime,RolePermission,
+                            FullName,Parent) VALUES('" + sUserNumber + "','" + sUserName +
+                            "','" + sUserPass + "',ADDDATE(NOW(),INTERVAL 31 DAY),NOW(),'" + sPermission +
+                            "','" + sFullName + "'," + sParent + ")";
+            return cmdText;
+        }
+
+
+        public void UpdateUserInfo(string sUserName, string sUserPass, string sFullName,string sAccount,
+                              //string sLineLoss, string sXiaXianJiXian, string sTax1, string sTax2,
+                              string sUserNumber, string sPermission,string sParent)
+        {
+
+            string cmdText = "UPDATE reguser SET UserNumber='" + sUserNumber + "',UserName='" + sUserName + "',Account=" + sAccount +
+                            ",UserPass='" + sUserPass + "',RolePermission='" + sPermission + "' WHERE UserName=" + sUserName;
+            DataAccess.ExecuteNonQuery(cmdText);
+            cmdText = "UPDATE reguser SET Account=Account-" + sAccount + "WHERE UserID=" + sParent;
+            DataAccess.ExecuteNonQuery(cmdText);
+
+        }
+    
+    
       
     }
 }

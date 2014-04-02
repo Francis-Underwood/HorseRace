@@ -11,6 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Other_MyMember : BasePage
 {
+    //private string sUserID = Session["UserID"].ToString();
     protected void Page_Load(object sender, EventArgs e)
     {
         string sUserID = Session["UserID"].ToString();
@@ -86,7 +87,7 @@ public partial class Other_MyMember : BasePage
             {
                 for(int i=0;i<dt.Rows.Count;i++)
                 {
-                    LBMember.Items.Add(dt.Rows[i][0].ToString());
+                    LBMember.Items.Add("PL:"+dt.Rows[i][0].ToString());
                 }
                 
             }
@@ -138,7 +139,7 @@ public partial class Other_MyMember : BasePage
         LBMember.Items.Add("NewPlayer");
         foreach (ListItem item in LBMember.Items)
         {
-            if (item.ToString() = "NewPlayer")
+            if (item.ToString() == "NewPlayer")
             {
                 item.Selected = true;
             }
@@ -151,6 +152,18 @@ public partial class Other_MyMember : BasePage
     }
     protected void BtnRemove_Click(object sender, EventArgs e)
     {
+        //foreach (ListItem item in LBMember.Items)
+        //{
+        //    if (item.Selected)
+        //    {
+        //        item.Selected = false;
+        //        LBMember.Items.Remove(item);
+        //    }
+        //}
+        if (LBMember.Items.Count > 0)
+        {
+            LBMember.Items.Remove(LBMember.SelectedItem);
+        }
 
     }
     protected void BtnUndo_Click(object sender, EventArgs e)
@@ -159,29 +172,106 @@ public partial class Other_MyMember : BasePage
     }
     protected void BtnSave_Click(object sender, EventArgs e)
     {
-        string sUserID = "";
-        string sUserName = "";
-        string sFullName = "";
-        string sUserPass = "";
-        string sPrefit = "";
-        string sLineLoss = "";
-        string sXiaXianJiXian = "";
-        string sTax1 = "";
-        string sTax2 = "";
-        string sUserNumber = "";
-        string sHorseTicketLimit = "";
+        //string sUserID = TxtBoxLoginID.Text;
+        string sUserID = Session["UserID"].ToString();
 
         if (LBMember.SelectedValue == "NewPlayer")
         {
+            string sUserName = TxtBoxLoginID.Text;
+            string sFullName = TxtBoxFullName.Text;
+            string sUserPass = TxtBoxPassword.Text;
+            //string sPrefit = ;
+            string sAccount = TxtBoxCreditLimit.Text;
+            string sXiaXianJiXian = TxtBoxDownLine.Text;
+            string sTax1 = TxtBoxBetTax.Text;
+            string sTax2 = TxtBoxEatTax.Text;
+            string sUserNumber = TxtBoxAccountNo.Text;
+            string sHorseTicketLimit = TxtBoxHorseTicketL.Text;
+            string sPermission = "";
+            if (DDListGroup2.Visible)
+            {
+                sPermission = Exchange(DDListGroup2.SelectedValue);
+            }
+            if (DDListGroup3.Visible)
+            {
+                sPermission = Exchange(DDListGroup3.SelectedValue);
+            }
+            if (DDListGroup4.Visible)
+            {
+                sPermission = Exchange(DDListGroup4.SelectedValue);
+            }
 
+            LBMember.Items.Add(sUserName);
+
+            RegUser.InsertUser(sUserName,sUserPass,sFullName,sAccount,sUserNumber,sPermission,sUserID);
+            RegUser.UpdateAccount(sUserID, sAccount);
+
+            if (LBMember.Items.Count > 0)
+            {
+                LBMember.Items.Remove(LBMember.SelectedItem);
+            }
+
+            //foreach (ListItem item in LBMember.Items)
+            //{
+            //    if (item.ToString() == "NewPlayer")
+            //    {
+            //        item.Selected = false;
+            //        LBMember.Items.Remove(item);
+            //    }
+            //}
+            ///
+            //string testtr = RegUser.ReturnCmdStr(sUserName,sUserPass,sFullName,sLineLoss,sXiaXianJiXian,sTax1,sTax2,sUserNumber,sHorseTicketLimit,sPermission,sUserID);
+            //Response.Write(testtr);
+            
         }
         else
         {
-
+            string sUserName = LBMember.SelectedValue;
+            string sFullName = TxtBoxFullName.Text;
+            string sUserPass = TxtBoxPassword.Text;
+            //string sPrefit = ;
+            string sAccount = TxtBoxCreditLimit.Text;
+            string sXiaXianJiXian = TxtBoxDownLine.Text;
+            string sTax1 = TxtBoxBetTax.Text;
+            string sTax2 = TxtBoxEatTax.Text;
+            string sUserNumber = TxtBoxAccountNo.Text;
+            string sHorseTicketLimit = TxtBoxHorseTicketL.Text;
+            string sPermission = "";
+            if (DDListGroup2.Visible)
+            {
+                sPermission = Exchange(DDListGroup2.SelectedValue);
+            }
+            if (DDListGroup3.Visible)
+            {
+                sPermission = Exchange(DDListGroup3.SelectedValue);
+            }
+            if (DDListGroup4.Visible)
+            {
+                sPermission = Exchange(DDListGroup4.SelectedValue);
+            }
+            RegUser.UpdateUserInfo(sUserName,sUserPass,sFullName,sAccount,sUserNumber,sPermission,sUserID);
         }
     }
     protected void BtnReset_Click(object sender, EventArgs e)
     {
 
+    }
+    protected string Exchange(string roletext)
+    {
+        string rolevalue = "";
+        switch (roletext)
+        {
+            case"player":
+                rolevalue = "1";
+                break;
+            case"agent":
+                rolevalue = "2";
+                break;
+            case"main agent":
+                rolevalue = "3";
+                break;
+
+        }
+        return rolevalue;
     }
 }
