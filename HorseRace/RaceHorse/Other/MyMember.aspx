@@ -6,21 +6,21 @@
 <head runat="server">
     <title>Untitled Page</title>
 </head>
-<body background="../Images/bg_bknd.jpg">
+<body background="../Images/bg_bknd_expand.jpg">
     
     <form id="form1" runat="server">
-    <div>
-        <asp:Panel ID="PanelMember" runat="server" Height="50px" Width="175px" style="left: 10px; position: absolute; top: 10px">
-        <table><tr><td colspan="2">
+    <div style="background-image: url(Images/bg_bknd_expand.JPG)">
+        <asp:Panel ID="PanelMember" runat="server" Height="350px" Width="175px" style="left: 10px; position: absolute; top: 10px">
+        <table width="100%" height="100%" ><tr><td colspan="2" height="280" align="left" cellpadding="1px" style="clip: rect(1px auto auto 0px)">
         
-        <asp:ListBox ID="LBMember" runat="server" DataTextField="UserName" DataValueField="UserID" AutoPostBack="True" OnSelectedIndexChanged="LBMember_SelectedIndexChanged"></asp:ListBox>
+        <asp:ListBox ID="LBMember" runat="server" DataTextField="UserName" DataValueField="UserID" AutoPostBack="True" OnSelectedIndexChanged="LBMember_SelectedIndexChanged" Rows="18" Width="150px"></asp:ListBox>
         
         
         </td></tr>
         
         <tr>
         <td><asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" /></td>
-        <td><asp:Button ID="BtnRemove" runat="server" Text="Remove" OnClick="BtnRemove_Click"  OnClientClick="return confirm('是否确认删除！')" /></td>
+        <td style="width: 72px"><asp:Button ID="BtnRemove" runat="server" Text="Remove" OnClick="BtnRemove_Click"  OnClientClick="return confirm('是否确认删除！')" /></td>
         </tr>
         
         </table>
@@ -38,64 +38,85 @@
         <table style="width: 100%">
             <tr>
                 <td colspan="3">
-        <asp:Label ID="LblMemberDetial" runat="server" Text="Member Details" Font-Size="15" ForeColor="Brown"></asp:Label></td>
+        <asp:Label ID="LblMemberDetial" runat="server" Text="Member Details"  Font-Bold="true" Font-Size="15" ForeColor="Brown"></asp:Label></td>
                 
             </tr>
             <tr>
-                <td style="width: 173px; height: 26px;">
+                <td style="width: 30%; height: 26px;">
         
         
-        <asp:Label ID="LblLastLogin" runat="server" Text="LastLogin"></asp:Label></td>
-                <td  colspan="2" style="width: 42px; height: 26px;">
+        <asp:Label ID="LblLastLogin" runat="server" Text="LastLogin" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%; height: 26px;">
         
         <asp:TextBox ID="TxtBoxLastLogin" runat="server" Text="N.A" ReadOnly="true"></asp:TextBox></td>
                 
             </tr>
             <tr>
-               <td style="width: 173px">
+               <td style="width: 30%; height: 21px;">
         
-        <asp:Label ID="LblAccountPrefix" runat="server" Text="Account Prefix"></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+        <asp:Label ID="LblAccountPrefix" runat="server" Text="Account Prefix" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%; height: 21px;">
+                
+                
+                <table>
+                <tr>
+                <td><asp:TextBox ID="TxtBoxAccountPrefix" runat="server" Text="HH" ReadOnly="true" Width="20px"></asp:TextBox></td>
+                <td>\</td>
+                <td><asp:TextBox ID="TextBox1" runat="server" Text="010" ReadOnly="true" Width="20px"></asp:TextBox></td>
+                </tr>
+                </table>
+                
+                
+                
+                
+                
+                
         
-        <asp:TextBox ID="TxtBoxAccountPrefix" runat="server" Text="HH" ReadOnly="true"></asp:TextBox>\<asp:TextBox ID="TextBox1" runat="server" Text="010" ReadOnly="true"></asp:TextBox></td>
+        </td>
+       
             </tr>
                  <tr>
-                <td style="height: 21px; width: 173px;">
+                <td style="height: 21px; width: 30%;">
        
-        <asp:Label ID="LblAccountNo" runat="server" Text="Account No."></asp:Label></td>
-                <td  colspan="2" style="width: 42px; height: 21px;">
+        <asp:Label ID="LblAccountNo" runat="server" Text="Account No." Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%; height: 21px;">
         
         <asp:TextBox ID="TxtBoxAccountNo" runat="server"></asp:TextBox></td>
             </tr>
                  <tr>
-                <td style="width: 173px">
-         <asp:Label ID="LblFullName" runat="server" Text="Full Name"></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+                <td style="width: 30%">
+         <asp:Label ID="LblFullName" runat="server" Text="Full Name" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%">
         
         <asp:TextBox ID="TxtBoxFullName" runat="server"></asp:TextBox></td>
                
             </tr>
                  <tr>
-                <td style="width: 173px">
-         <asp:Label ID="LblLoginID" runat="server" Text="Login ID"></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+                <td style="width: 30%; height: 26px;">
+         <asp:Label ID="LblLoginID" runat="server" Text="Login ID" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%; height: 26px;">
         
         <asp:TextBox ID="TxtBoxLoginID" runat="server"></asp:TextBox></td>
             </tr>
                  <tr>
-                <td style="width: 173px; height: 58px;">
+                <td style="width: 30%">
         
-        <asp:Label ID="LblPassword" runat="server" Text="Password"></asp:Label></td>
-                <td  colspan="2" style="width: 42px; height: 58px;">
+        <asp:Label ID="LblPassword" runat="server" Text="Password" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%">
+                
+                <table width="100%">
+                <tr><td><asp:TextBox ID="TxtBoxPassword" runat="server" Width="70px"></asp:TextBox></td>
+                <td style="width: 70%"><em>(case sensitive alohabet)</em></td></tr></table>
+                
         
-        <asp:TextBox ID="TxtBoxPassword" runat="server"></asp:TextBox><em>(case sensitive alohabet)</em></td>
+        </td>
             </tr>
                  <tr>
-                <td style="width: 173px">
+                <td style="width: 30%">
       
         
-        <asp:Label ID="LblGroup" runat="server" Text="Group"></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+        <asp:Label ID="LblGroup" runat="server" Text="Group" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%">
         
         <asp:DropDownList ID="DDListGroup2" runat="server">
         <asp:ListItem>player</asp:ListItem>
@@ -114,54 +135,54 @@
         </td>
             </tr>
                  <tr>
-                <td style="width: 173px">
+                <td style="width: 30%">
         
         
-        <asp:Label ID="LblStatus" runat="server" Text="Status"></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+        <asp:Label ID="LblStatus" runat="server" Text="Status" Font-Size="11pt"></asp:Label></td>
+                <td  colspan="2" style="width: 70%">
         
        <asp:CheckBox ID="CheckBox1" runat="server" Width="113px"  Text="Active"/></td>
             </tr>
                  <tr>
                 <td colspan="3">
         
-        <asp:Label ID="LblNote" runat="server" Text="Note:        Inactivingating"></asp:Label></td>
+        <asp:Label ID="LblNote" runat="server" ForeColor="Red" Font-Size="10" Text="Note:        Inactivingating"></asp:Label></td>
                
             </tr>
                  <tr>
                 <td colspan="3" style="height: 5px">
         
-        <asp:Label ID="LblCreditDetial" runat="server" Text="Credit Detial" Font-Size="15" ForeColor="Brown"></asp:Label></td>
+        <asp:Label ID="LblCreditDetial" runat="server" Text="Credit Detial" Font-Size="15"  Font-Bold="true" ForeColor="Brown"></asp:Label></td>
                 
             </tr>
             
             <tr>
-                <td style="width: 173px">
+                <td style="width: 30%">
                
-        <asp:Label ID="LblCurrency" runat="server" Text="Currency" ></asp:Label></td>
-                <td  colspan="2" style="width: 42px">
+        <asp:Label ID="LblCurrency" runat="server" Text="Currency" Font-Size="11pt" ></asp:Label></td>
+                <td  colspan="2" style="width: 70%">
         
         <asp:TextBox ID="TxtBoxCurrency" runat="server"></asp:TextBox></td>
                 
             </tr>
             
             <tr>
-                <td style="width: 173px">
+                <td style="width: 30%">
         
-        <asp:Label ID="LblCreditLimit" runat="server" Text="Credit Limit"></asp:Label>
+        <asp:Label ID="LblCreditLimit" runat="server" Text="Credit Limit" Font-Size="11pt"></asp:Label>
         
-        <asp:TextBox ID="TxtBoxCreditLimit" runat="server"></asp:TextBox></td>
-                <td style="width: 42px">
-        <asp:Label ID="LblDownLine" runat="server" Text="DownLine"></asp:Label><asp:TextBox ID="TxtBoxDownLine" runat="server"></asp:TextBox></td>
-                <td style="width: 42px">
-        <asp:Label ID="LblBalance" runat="server" Text="Balance"></asp:Label>
+        <asp:TextBox ID="TxtBoxCreditLimit" runat="server" Width="75px"></asp:TextBox></td>
+                <td style="width: 35%">
+        <asp:Label ID="LblDownLine" runat="server" Text="DownLine" Font-Size="11pt"></asp:Label><asp:TextBox ID="TxtBoxDownLine" runat="server" Width="70px"></asp:TextBox></td>
+                <td style="width: 35%">
+        <asp:Label ID="LblBalance" runat="server" Text="Balance" Font-Size="11pt"></asp:Label>
         
-        <asp:TextBox ID="TxtBoxBalance" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="TxtBoxBalance" runat="server" Width="80px"></asp:TextBox></td>
             </tr>
             
             <tr>
-                <td  colspan="3" style="width: 173px">
-                    <asp:Label ID="LblNote2" runat="server" Text="Note"></asp:Label>
+                <td  colspan="3" >
+                    <asp:Label ID="LblNote2" runat="server"  Font-Size="10" ForeColor="Red" Text="Note"></asp:Label>
                 </td>
                 
             </tr>
@@ -169,42 +190,42 @@
           
             
             <tr>
-                <td style="width: 173px">
-                    <asp:Label ID="LblLossLimit" runat="server" Text="Set Loss Limit Over"></asp:Label>
+                <td style="width: 30%">
+                    <asp:Label ID="LblLossLimit" runat="server" Text="Set Loss Limit Over" Width="126px" Font-Size="11pt"></asp:Label>
                 </td>
-                <td  colspan="2" style="width: 42px">
-                    <asp:TextBox ID="TxtBoxLossLimit" runat="server" ></asp:TextBox><asp:Label ID="LblBeLL" runat="server" Text="Label"></asp:Label>
+                <td  colspan="2" style="width: 70%">
+                    <asp:TextBox ID="TxtBoxLossLimit" runat="server" Width="60px" ></asp:TextBox><asp:Label ID="LblBeLL" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             
             <tr>
-                <td style="width: 173px">
-                    <asp:Label ID="LblHorseTicketL" runat="server" Text="Horse Ticket Limit"></asp:Label>
+                <td style="width: 30%">
+                    <asp:Label ID="LblHorseTicketL" runat="server" Text="Horse Ticket Limit" Font-Size="11pt"></asp:Label>
                 </td>
-                <td  colspan="2" style="width: 42px">
-                    <asp:TextBox ID="TxtBoxHorseTicketL" runat="server"></asp:TextBox><asp:Label ID="LblBeHTL" runat="server"
+                <td  colspan="2" style="width: 70%">
+                    <asp:TextBox ID="TxtBoxHorseTicketL" runat="server" Width="60px"></asp:TextBox><asp:Label ID="LblBeHTL" runat="server"
                         Text="Label"></asp:Label>
                 </td>
             </tr>
             
             <tr>
-                <td style="width: 173px">
-                    <asp:Label ID="LblTax1" runat="server" Text="My Upline Tax me"></asp:Label>
+                <td style="width: 30%">
+                    <asp:Label ID="LblTax1" runat="server" Text="My Upline Tax me" Font-Size="11pt"></asp:Label>
                 </td>
-                <td  colspan="2" style="width: 42px">
+                <td  colspan="2" style="width: 70%">
                     <asp:Label ID="LblBetTax" runat="server" Text="Label"></asp:Label>
-                    <asp:TextBox ID="TxtBoxBetTax" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TxtBoxBetTax" runat="server" Width="45px"></asp:TextBox>
                     <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             
               <tr>
-                <td style="width: 173px">
-                    <asp:Label ID="LblTax2" runat="server" Text="My Upline Tax me"></asp:Label>
+                <td style="width: 30%">
+                    <asp:Label ID="LblTax2" runat="server" Text="My Upline Tax me" Font-Size="11pt"></asp:Label>
                 </td>
-                <td  colspan="2" style="width: 42px">
+                <td  colspan="2" style="width: 70%">
                 <asp:Label ID="LblEatTax" runat="server" Text="Label"></asp:Label>
-                <asp:TextBox ID="TxtBoxEatTax" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TxtBoxEatTax" runat="server" Width="45px"></asp:TextBox>
                 <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
                 </td>
                 
@@ -212,10 +233,10 @@
             
         </table>
         <center>
-        <table width="100%" height="100%" >
+        <table width="100%" height="100%"  backgroundcolor="#FFFFFF">
             <tr>
                
-                <td style="width: 253px">
+                <td style="width: 53px">
                     &nbsp;</td>
                  <td style="width: 212px">
                 <asp:Button ID="BtnReset" runat="server" Text="Reset" OnClick="BtnReset_Click" />
