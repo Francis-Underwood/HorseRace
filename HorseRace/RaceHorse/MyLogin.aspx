@@ -25,7 +25,7 @@ table       { font:13px tahoma }
         <br />
         <br />
         <form id="form1" runat="server">
-            <marquee behavior="slide" direction="up" class="TT">深圳赛马<br><span>Horse Racing International</span></marquee>
+            <marquee behavior="slide" direction="up" class="TT">AAStar.NET<br><span>Horse Racing International</span></marquee>
             <table class="Login" cellspacing="1" cellpadding="15">
                 <tr>
                     <td>

@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RegUser.aspx.cs" Inherits="RegUser" %>
 
 <%@ Register Src="~/ASCX/OtherHead.ascx" TagName="Head" TagPrefix="Race" %>
+<%@ Register Src="~/ASCX/OtherAgentHead.ascx" TagName="OtherAgentHead" TagPrefix="Race" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>国际赛马</title>
@@ -11,6 +12,7 @@
 </head>
 <body>
     <Race:Head ID="Head1" runat="server" />
+    <Race:OtherAgentHead ID="OtherAgentHead1" runat="server" />
     <form id="form1" runat="server">
         <div class="Content">
             <table cellspacing="1" cellpadding="0">

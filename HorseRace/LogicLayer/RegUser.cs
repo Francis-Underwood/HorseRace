@@ -370,6 +370,65 @@ namespace Race.LogicLayer
             return DataAccess.ReturnDataset(cmdText);
         }
 
+
+        /// <summary>
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="sUserID"></param>
+        /// <returns></returns>
+        public DataSet GetUserInfo(string sUserID)
+        {
+            string cmdText = "SELECT UserName,UserNumber,QianBi,Account,PasswordTime,Tax1,Tax2,ShuYing,LastLogTime FROM reguser WHERE UserID=" + sUserID;
+            return DataAccess.ReturnDataset(cmdText);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sUserID"></param>
+        /// <returns></returns>
+        public string GetRole(string sUserID)
+        {
+            string role="";
+            string cmdText = "SELECT RolePermission FROM reguser WHERE UserID=" + sUserID;
+            object obj = DataAccess.ExecuteScalar(cmdText);
+            if (obj != null)
+            {
+                role = obj.ToString();
+            }
+            else
+            {
+
+            }
+            return role;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sUserID"></param>
+        /// <returns></returns>
+        public DataSet GetMember(string sUserID)
+        {
+            string cmdText = "SELECT UserID,UserName FROM reguser WHERE Parent=" + sUserID;
+            return DataAccess.ReturnDataset(cmdText);
+        }
+
+        public DataTable GetMemberInfo(string sUserName)
+        {
+            string cmdText = "SELECT * FROM reguser WHERE UserName='" + sUserName+"'";
+            DataTable dt = DataAccess.ReturnDataset(cmdText).Tables[0];
+            
+                return dt;
+            
+        }
+        public DataTable GetMemberList(string sUserID)
+        {
+            string cmdText = "SELECT UserName FROM reguser WHERE Parent=" + sUserID;
+            DataTable dt = DataAccess.ReturnDataset(cmdText).Tables[0];
+            return dt;
+        }
       
     }
 }

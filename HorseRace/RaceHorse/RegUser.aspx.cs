@@ -14,6 +14,22 @@ public partial class RegUser : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        string sUserID = Session["UserID"].ToString();
+        string sRole = RegUser.GetRole(sUserID);
+        Session["Role"] = sRole;
+        if (sRole == "1")
+        {
+            Head1.Visible = true;
+            OtherAgentHead1.Visible = false;
+        }
+        else
+        {
+            Head1.Visible = false;
+            OtherAgentHead1.Visible = true;
+        }
+
+
         Button2.Attributes.Add("onclick", "document.forms[0].reset();return false;");
         DataBind();
     }
